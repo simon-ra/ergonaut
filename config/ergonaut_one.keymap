@@ -26,19 +26,19 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE      &kp Q  &kp W  &kp E             &kp R                   &kp T      &kp Y      &kp U            &kp I                   &kp O    &kp P           &kp BACKSPACE
-&kp TAB         &kp A  &kp S  &kp D             &kp F                   &kp G      &kp H      &kp J            &kp K                   &kp L    &kp ENTER       &mt RCTRL SQT
-&mt LALT MINUS  &kp Z  &kp X  &kp C             &kp V                   &kp B      &kp N      &kp M            &kp COMMA               &kp DOT  &kp LEFT_SHIFT  &lt 3 F6
-                              &mt LEFT_ALT TAB  &mt LEFT_GUI BACKSPACE  &lt 1 RET  &lt 2 ESC  &mt RSHFT SPACE  &mt LEFT_CONTROL MINUS
+&kp ESC         &kp Q  &kp W  &kp E             &kp R                   &kp T      &kp Y         &kp U            &kp I                   &kp O    &kp P       &kp BACKSPACE
+&kp TAB         &kp A  &kp S  &kp D             &kp F                   &kp G      &kp H         &kp J            &kp K                   &kp L    &kp ENTER   &mt RCTRL SQT
+&mt LALT MINUS  &kp Z  &kp X  &kp C             &kp V                   &kp B      &kp N         &kp M            &kp COMMA               &kp DOT  &kp LSHIFT  &lt 3 F6
+                              &mt LEFT_ALT TAB  &mt LEFT_GUI BACKSPACE  &lt 1 RET  &lt 2 ESCAPE  &mt RSHFT SPACE  &mt LEFT_CONTROL MINUS
             >;
         };
 
         raise_layer {
             bindings = <
-&kp ESCAPE       &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp DOLLAR    &kp PIPE           &kp EXCLAMATION  &kp PLUS         &kp AMPERSAND  &kp AT_SIGN     &kp CLCK
-&mt LCTRL EQUAL  &kp LESS_THAN     &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp QUESTION  &kp STAR           &kp SEMICOLON    &kp SLASH        &kp MINUS      &kp UNDERSCORE  &mt RCTRL K_APP
-&kp LALT         &kp TILDE         &kp GRAVE        &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE       &kp PERCENT   &kp CARET          &kp COLON        &kp BACKSLASH    &kp EQUAL      &kp HASH        &kp RALT
-                                                    &trans             &trans                 &trans        &kp C_VOLUME_DOWN  &kp BACKSPACE    &kp C_VOLUME_UP
+&kp ESCAPE       &kp LS(PERIOD)  &kp LS(RIGHT_BRACKET)  &kp RIGHT_BRACKET     &kp LS(NUMBER_0)  &kp LS(N4)        &kp LS(BACKSLASH)  &kp LS(N1)     &kp LS(EQUAL)    &kp LS(NUMBER_7)  &kp LS(NUMBER_2)  &kp CLCK
+&mt LCTRL EQUAL  &kp LS(COMMA)   &kp LS(LEFT_BRACKET)   &kp LEFT_BRACKET      &kp LS(NUMBER_9)  &kp LS(SLASH)     &kp LS(NUMBER_8)   &kp SEMICOLON  &kp SLASH        &kp MINUS         &kp UNDERSCORE    &mt RCTRL K_APP
+&kp LALT         &kp LS(GRAVE)   &kp GRAVE              &kp LS(SINGLE_QUOTE)  &kp SINGLE_QUOTE  &kp LS(NUMBER_5)  &kp CARET          &kp COLON      &kp BACKSLASH    &kp EQUAL         &kp HASH          &kp RALT
+                                                        &trans                &trans            &trans            &kp C_VOLUME_DOWN  &kp BACKSPACE  &kp C_VOLUME_UP
             >;
         };
 
