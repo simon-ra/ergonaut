@@ -1,1 +1,63 @@
-boards/shields/ergonaut_one/ergonaut_one.keymap
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+#define DEF 0
+#define LWR 1
+#define RSE 2
+#define ADJ 3
+
+&lt { quick-tap-ms = <200>; };
+
+&mt { quick-tap-ms = <200>; };
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri-layer {
+            if-layers = <1 1>;
+            then-layer = <4>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+&kp ESCAPE      &kp Q  &kp W  &kp E             &kp R                   &kp T      &kp Y      &kp U            &kp I                   &kp O    &kp P           &kp BACKSPACE
+&kp TAB         &kp A  &kp S  &kp D             &kp F                   &kp G      &kp H      &kp J            &kp K                   &kp L    &kp ENTER       &mt RCTRL SQT
+&mt LALT MINUS  &kp Z  &kp X  &kp C             &kp V                   &kp B      &kp N      &kp M            &kp COMMA               &kp DOT  &kp LEFT_SHIFT  &lt 3 F6
+                              &mt LEFT_ALT TAB  &mt LEFT_GUI BACKSPACE  &lt 1 RET  &lt 2 ESC  &mt RSHFT SPACE  &mt LEFT_CONTROL MINUS
+            >;
+        };
+
+        raise_layer {
+            bindings = <
+&kp ESCAPE       &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp DOLLAR    &kp PIPE           &kp EXCLAMATION  &kp PLUS         &kp AMPERSAND  &kp AT_SIGN     &kp CLCK
+&mt LCTRL EQUAL  &kp LESS_THAN     &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp QUESTION  &kp STAR           &kp SEMICOLON    &kp SLASH        &kp MINUS      &kp UNDERSCORE  &mt RCTRL K_APP
+&kp LALT         &kp TILDE         &kp GRAVE        &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE       &kp PERCENT   &kp CARET          &kp COLON        &kp BACKSLASH    &kp EQUAL      &kp HASH        &kp RALT
+                                                    &trans             &trans                 &trans        &kp C_VOLUME_DOWN  &kp BACKSPACE    &kp C_VOLUME_UP
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+&kp ESCAPE  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans          &trans          &trans        &trans           &trans  &trans
+&trans      &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans      &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans          &trans          &trans        &trans           &trans  &trans
+                                        &kp C_VOL_DN  &trans        &kp C_VOL_UP  &trans          &trans          &trans
+            >;
+        };
+
+        adjust_layer {
+            bindings = <
+&bootloader  &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+&sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
+                                         &trans        &none         &trans        &none         &trans        &trans
+            >;
+        };
+    };
+};
