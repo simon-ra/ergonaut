@@ -36,7 +36,7 @@
         raise_layer {
             bindings = <
 &kp ESCAPE       &kp LS(PERIOD)  &kp LS(RIGHT_BRACKET)  &kp RIGHT_BRACKET     &kp LS(NUMBER_0)  &kp LS(N4)        &kp LS(BACKSLASH)  &kp LS(N1)     &kp LS(EQUAL)    &kp LS(NUMBER_7)  &kp LS(NUMBER_2)  &kp CLCK
-&mt LCTRL EQUAL  &kp LS(COMMA)   &kp LS(LEFT_BRACKET)   &kp LEFT_BRACKET      &kp LS(NUMBER_9)  &kp LS(SLASH)     &kp LS(NUMBER_8)   &kp SEMICOLON  &kp SLASH        &kp MINUS         &kp LS(MINUS)     &mt RCTRL K_APP
+&mt LCTRL EQUAL  &kp LS(COMMA)   &kp LS(LEFT_BRACKET)   &kp LEFT_BRACKET      &kp LS(NUMBER_9)  &kp LS(SLASH)     &kp LS(NUMBER_8)   &kp SEMICOLON  &kp SLASH        &kp MINUS         &kp UNDER         &mt RCTRL K_APP
 &kp LALT         &kp LS(GRAVE)   &kp GRAVE              &kp LS(SINGLE_QUOTE)  &kp SINGLE_QUOTE  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)   &kp LS(SEMI)   &kp BACKSLASH    &kp EQUAL         &kp LS(NUMBER_3)  &kp RALT
                                                         &trans                &trans            &trans            &kp C_VOLUME_DOWN  &kp BACKSPACE  &kp C_VOLUME_UP
             >;
