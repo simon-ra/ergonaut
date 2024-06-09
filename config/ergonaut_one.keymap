@@ -17,10 +17,10 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E              &kp R            &kp T                    &kp Y                 &kp U        &kp I         &kp O    &kp P       &kp BACKSPACE
-&kp TAB     &kp A  &kp S  &kp D              &kp F            &kp G                    &kp H                 &lt 1 J      &kp K         &kp L    &kp ENTER   &mt RCTRL SQT
-&lt 3 SEMI  &kp Z  &kp X  &kp C              &kp V            &kp B                    &kp N                 &kp M        &kp COMMA     &kp DOT  &kp LSHIFT  &lt 3 F6
-                          &kp RIGHT_CONTROL  &lt 1 BACKSPACE  &mt LEFT_COMMAND ESCAPE  &mt LEFT_COMMAND TAB  &lt 2 SPACE  &kp LEFT_ALT
+&lt 4 ESCAPE  &kp Q  &kp W  &kp E              &kp R            &kp T                    &kp Y                 &kp U        &kp I         &kp O    &kp P       &kp BACKSPACE
+&kp TAB       &kp A  &kp S  &kp D              &kp F            &kp G                    &kp H                 &lt 1 J      &kp K         &kp L    &kp ENTER   &mt RCTRL SQT
+&lt 3 SEMI    &kp Z  &kp X  &kp C              &kp V            &kp B                    &kp N                 &kp M        &kp COMMA     &kp DOT  &kp LSHIFT  &lt 3 F6
+                            &kp RIGHT_CONTROL  &lt 1 BACKSPACE  &mt LEFT_COMMAND ESCAPE  &mt LEFT_COMMAND TAB  &lt 2 SPACE  &kp LEFT_ALT
             >;
         };
 
@@ -35,10 +35,10 @@
 
         lower_layer {
             bindings = <
-&kp ESCAPE  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans          &trans          &trans        &trans           &trans  &trans
-&trans      &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans      &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans          &trans          &trans        &trans           &trans  &trans
-                                        &kp C_VOL_DN  &trans        &kp C_VOL_UP  &trans          &trans          &trans
+&kp ESCAPE  &trans        &kp NUMBER_1  &kp NUMBER_2       &kp NUMBER_3  &trans            &trans          &trans          &trans        &trans           &trans  &trans
+&trans      &kp NUMBER_0  &kp NUMBER_4  &kp N5             &kp NUMBER_6  &trans            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans      &trans        &kp NUMBER_7  &kp NUMBER_8       &kp NUMBER_9  &trans            &trans          &trans          &trans        &trans           &trans  &trans
+                                        &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans          &trans          &trans
             >;
         };
 
@@ -48,6 +48,15 @@
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
 &sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
                                          &trans        &none         &trans        &none         &trans        &trans
+            >;
+        };
+
+        system-shortcuts {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans           &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans           &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans      &trans             &trans
             >;
         };
     };
